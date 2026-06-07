@@ -1,0 +1,30 @@
+﻿<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Abdulrahman mostafa">
+        <meta name="description" content="This page is for training purposes.">
+        <title>My First Web Page on MVC</title>
+        <link rel="icon" href="./Images/blazor.png" type="image/x-icon">
+    </head>
+    <body>
+        <table>
+            <thead>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Description</th>
+                <th scope="col">Image</th>
+            </thead>
+            <tbody>
+                @foreach (var product in Model)
+                {
+                    <tr>
+                        <td>@product.Id</td>
+                        <td>@product.Name</td>
+                        <td>@product.Description</td>
+                        <td><img src="@product.ImageUrl" alt="@product.Name" width="50" height="50" /></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </body>
+</html>
