@@ -11,8 +11,8 @@
             <thead>
                 <th scope="col">Id</th>
                 <th scope="col">Name</th>
-                <th scope="col">Description</th>
                 <th scope="col">Image</th>
+                <th scope="col">Descpription page </th>
             </thead>
             <tbody>
                 @foreach (var product in Model)
@@ -20,8 +20,8 @@
                     <tr>
                         <td>@product.Id</td>
                         <td>@product.Name</td>
-                        <td>@product.Description</td>
                         <td><img src="@product.ImageUrl" alt="@product.Name" width="50" height="50" /></td>
+                    <td> <a href="http://localhost:5181/Product/details?productId=@product.Id">Description page</a> </td>
                     </tr>
                 }
             </tbody>
